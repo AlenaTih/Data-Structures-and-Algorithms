@@ -22,5 +22,5 @@ For inquiries or feedback, please contact me at alyonatihomirova9@gmail.com.
 
 ## Acknowledgments
 
-The course I used is on [YouTube](https://www.youtube.com/watch?v=NErrGZ64OdE&t=726s)
+The course I used is on [YouTube](https://www.youtube.com/watch?v=NErrGZ64OdE&t=726s).
 

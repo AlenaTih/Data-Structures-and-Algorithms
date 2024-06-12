@@ -22,4 +22,5 @@ function selectionSort(array) {
 console.log(selectionSort(array))
 console.log("count = ", count)
 
-// Complexity: O(n^2) where n = the length of the array
+// Complexity: O(n^2) where n = the length of the array (with a coefficient of about 1/2 before n^2,
+// but this coefficient is ignored when we calculate the complexity)

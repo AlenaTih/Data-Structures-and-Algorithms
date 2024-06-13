@@ -31,3 +31,22 @@ console.log(binarySearch(array, 4))
 console.log("count = ", count)
 
 // Complexity: O(Log2n) where n = the length of the array
+
+
+function recursiveBinarySearch(array, target, start, end) {
+    let middle = Math.floor((start + end) / 2)
+    
+    count += 1
+
+    if (array[middle] === target) {
+        return middle
+    }
+    if (target < array[middle]) {
+        return recursiveBinarySearch(array, target, start, middle - 1)
+    } else {
+        return recursiveBinarySearch(array, target, middle + 1, end)
+    }
+}
+
+console.log(recursiveBinarySearch(array, 4, 0, array.length - 1))
+console.log("count = ", count)

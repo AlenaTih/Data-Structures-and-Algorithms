@@ -8,7 +8,7 @@ function binarySearch(array, target) {
     let found = false
     let position = -1
 
-    while (found === fasle && start <= end) {
+    while (found === false && start <= end) {
         count += 1
 
         middle = Math.floor((start + end) / 2)

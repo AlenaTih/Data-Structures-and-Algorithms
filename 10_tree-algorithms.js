@@ -49,3 +49,21 @@ const tree = [
         ]
     }
 ]
+
+const recursiveTreeSum = (tree) => {
+    let sum = 0
+
+    tree.forEach(node => {
+        sum += node.v
+
+        if (!node.c) { // A base case that stops the recursion
+            return node.v
+        }
+    
+        sum += recursiveTreeSum(node.c)
+    })
+
+    return sum
+}
+
+console.log(recursiveTreeSum(tree))

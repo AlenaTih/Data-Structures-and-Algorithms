@@ -13,12 +13,12 @@ graph.g = {}
  * The graph object is a representation of the graph, where each node is a key and its value is an object containing the nodes it is connected to and the cost of the connection.
  * The function returns an object containing the cost of each node in the shortest path from the start node to the end node.
  */
-function dijkstra(graph, start, end) {
+function dijkstra(graph, start, end) { // Shortest path using Dijkstra's algorithm
     const costs = {} // An object to store the costs of each node
     const processed = [] // An array to store the nodes that have already been processed
     let neighbors = {} // An object to store the neighbors of each node
 
-    // Iterate over each node in the graph
+    // Iterate over each node in the graph to add costs to the nodes that we can reach from the start node
     Object.keys(graph).forEach(node => {
         // If the node is not the start node, set its cost to infinity or the cost of the connection from the start node to the node
         if (node !== start) {
@@ -29,7 +29,7 @@ function dijkstra(graph, start, end) {
 
     // Find the node with the lowest cost that has not been processed
     let node = findLowestCostNode(costs, processed)
-    // While there is a node to process
+    // While there is a node to process (we haven't cover the entire graph)
     while (node) {
         // Get the cost of the current node
         const cost = costs[node]
@@ -48,7 +48,7 @@ function dijkstra(graph, start, end) {
         })
         // Add the current node to the array of processed nodes
         processed.push(node)
-        // Find the node with the lowest cost that has not been processed
+        // Find the node with the lowest cost that has not been processed again
         node = findLowestCostNode(costs, processed)
     }
     // Return the object containing the cost of each node in the shortest path

@@ -27,4 +27,4 @@ function factorial(n) { // Iterative approach
 
 const cashFactorial = cashFunction(factorial)
 
-console.log(cashFactorial(9))
+cashFactorial(9)

@@ -21,7 +21,7 @@ function dijkstra(graph, start, end) { // Shortest path using Dijkstra's algorit
 
     let node = findLowestCostNode(costs, processed)
     while (node) {
-        let cost = costs[node]
+        const cost = costs[node]
         neighbors = graph[node]
 
         Object.keys(neighbors).forEach(neighbor => {
@@ -39,7 +39,7 @@ function dijkstra(graph, start, end) { // Shortest path using Dijkstra's algorit
 
 function findLowestCostNode(costs, processed) {
     let lowestCost = Infinity
-    let LowestCostNode
+    let lowestCostNode
 
     Object.keys(costs).forEach(node => {
         let cost = costs[node]
@@ -48,5 +48,7 @@ function findLowestCostNode(costs, processed) {
             lowestNode = node
         }
     })
-    return LowestCostNode
+    return lowestCostNode
 }
+
+console.log(dijkstra(graph, "a", "g"))

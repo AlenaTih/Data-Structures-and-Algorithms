@@ -1,0 +1,13 @@
+{
+  "name": "data-structures-and-algorithms",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-node": "^29.7.0"
+  }
+}
+
